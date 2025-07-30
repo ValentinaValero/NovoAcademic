@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar + Sidebar Futurista</title>
+  <link rel="stylesheet" type="text/css" href="inicio.css">
+  <script src="inicio.js"></script>
+ 
+   <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGAÇÃO -->
+  <header class="barra-navegacao">
+    <div class="container-navegacao">
+      <div class="logo-navegacao"><img src="imagens/logoAH.png" alt="Logo"></div>
+        <div class="search-bar">
+            <input type="text" class="Pesquisar" id="searchInput" placeholder="Pesquisar...">
+        </div>
+
+      <button id="botaoAbrir" class="botao-menu"><i data-lucide="menu"></i></button>
+
+    </div>
+  </header>
+
+  <!-- FUNDO ESCURECIDO -->
+  <div class="fundo-escurecido" id="fundoEscurecido"></div>
+
+  <!-- MENU LATERAL -->
+  <aside class="menu-lateral" id="menuLateral">
+    <button class="botao-fechar" id="botaoFechar"><i data-lucide="x"></i></button>
+    <div class="logo"></div>
+    <nav class="navegacao-lateral">
+      <a href="inicio.html"><button class="botao-navegacao"><span>Início</span><i data-lucide="home"></i></button></a>
+      <a href="perfil.html"><button class="botao-navegacao"><span>Perfil</span><i data-lucide="user"></i></button></a>
+      <a href="notificacoes.html"><button class="botao-navegacao"><span>Notificações</span><i data-lucide="bell"></i></button></a>
+      <a href="noticias.html"><button class="botao-navegacao"><span>Notícias</span><i data-lucide="newspaper"></i></button></a>
+      <a href="configuracoes.html"><button class="botao-navegacao"><span>Configurações</span><i data-lucide="settings"></i></button></a>
+      <a href=""><button class="botao-navegacao"><span>Sair</span><i data-lucide="log-out"></i></button></a>
+    </nav>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    
+    <div class="linha-topo">
+  
+    <section class="post-form">
+      <div class="escolherIMG">
+  <label for="imageInput" class="custom-file-label">Escolher imagem</label>
+  <input type="file" id="imageInput" accept="image/*" style="display: none;" />
+</div>
+      <h1>Criar Postagem</h1>
+      <textarea id="captionInput" placeholder="Escreva uma legenda..."></textarea>
+      <button onclick="addPost()">Publicar</button>
+    </section>
+
+     <a href="materias.html" class="suaTurma">
+    <p>✨ Sua turma: 2B DS</p>
+    </a>
+    </div>
+    </div>
+   
+
+    <section id="feed" class="feed">
+      <!-- Posts aparecerão aqui -->
+    </section>
+  </main>
+
+</body>
+</html>

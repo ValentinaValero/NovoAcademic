@@ -1,0 +1,134 @@
+body{
+    background: #171718;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*Garante que o body ocupe toda a altura da tela*/
+    overflow: hidden; /*Impede barra de rolagem*/
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    background: #6A0DAD;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    width: 38%;
+    height: 75%;
+    font-size: 1rem;
+    font-family: 'Jaro', sans-serif;
+    border-radius: 0.8rem;
+    
+}
+
+.login img {
+    width: 30%;
+    margin-top: -2rem; /*Para colocar logo mais em cima*/
+    margin-bottom: -1rem;
+}
+
+.login h1 {
+    margin-bottom: 0rem; /*Espaço abaixo do h1*/
+}
+
+
+.login input {
+    background: #272729;
+    color: #ffffff;
+    width: 70%;
+    height: 8%;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem; /* Espaço entre os inputs */
+    padding-left: 0.7rem; /* Espaço inicial no texto do placeholder */
+
+}
+
+.login input:focus {
+    outline: none;
+}
+
+.login button{
+    background:#9BAD0E;
+    color: #ffffff;
+    width: 73%;
+    height: 9%;
+    border: none;
+    border-radius: 0.5rem;
+    font: 1.5rem 'Jaro', sans-serif;
+    cursor: pointer;
+
+}
+
+.login a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.login button:hover{
+    background: #687520;
+}
+
+
+/* Responsividade para telas pequenas */
+@media (max-width: 900px) {
+    .login {
+        width: 80%;
+        min-height: 75%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .login img {
+        width: 30%;
+        margin-top: 0rem;
+    }
+    .login h1 {
+        font-size: 2rem;
+    }
+    .login input{
+        font-size: 1rem;
+        max-width: 110%;
+        min-height: 8%;
+        height: 2.5rem;
+    }
+
+    .login button{
+        font-size: 1rem;
+        max-width: 110%;
+        min-height: 9%;
+        margin-bottom: 2rem;
+        height: 3rem;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .login {
+        width: 80%;
+        height: 55%;
+        min-height: unset;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    .login img {
+        width: 40%;
+        margin-top: 0.5rem;
+    }
+    .login h1 {
+        font-size: 1.5rem;
+    }
+    .login input{
+        font-size: 1rem;
+        width: 80%;
+        min-height: 8%;
+        height: 2.5rem;
+    }
+
+    .login button{
+        font-size: 1rem;
+        min-height: 9%;
+        width: 83%;
+        height: 3rem;
+    }
+}

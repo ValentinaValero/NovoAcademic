@@ -1,0 +1,306 @@
+ 
+   /* Seu CSS existente - mantido igual */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #171718;
+  color: white;
+  display: flex;               /* ADICIONADO para o perfil centralizar */
+  justify-content: center;     /* ADICIONADO para o perfil centralizar */
+  align-items: center;         /* ADICIONADO para o perfil centralizar */
+  height: 100vh;               /* ADICIONADO para o perfil centralizar */
+}
+
+/* ----------- BARRA DE NAVEGAÇÃO ----------- */
+header.barra-navegacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #6A0DAD;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #a437d6;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  animation: fadeSlideDown 0.6s ease;
+}
+
+@keyframes fadeSlideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container-navegacao {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-navegacao img {
+  width: 4.5rem;
+}
+
+.botao-menu {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-menu i {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.2;
+}
+
+main {
+  padding: 80px 24px 40px;
+}
+
+.linha-topo {
+  display: flex;
+  gap: 2rem; /* Espaço entre os blocos */
+  align-items: flex-start; /* Alinha pelo topo */
+  margin-bottom: 2rem;
+}
+
+/* ----------- FUNDO ESCURECIDO ----------- */
+.fundo-escurecido {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: none;
+  z-index: 100;
+}
+
+.fundo-escurecido.ativo {
+  display: block;
+}
+
+/* ----------- MENU LATERAL ----------- */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: #6A0DAD;
+  backdrop-filter: blur(16px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -8px 0 20px rgba(0, 0, 0, 0.3);
+  padding: 40px 20px;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 100;
+}
+
+.menu-lateral.ativo {
+  transform: translateX(0%);
+}
+
+.botao-fechar {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.botao-fechar i {
+  width: 24px;
+  height: 24px;
+}
+
+.navegacao-lateral {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  gap: 16px;
+}
+
+.navegacao-lateral a {
+  text-decoration: none;
+}
+
+.botao-navegacao {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.botao-navegacao:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-4px);
+}
+
+.botao-navegacao.ativo {
+  background: rgba(255, 255, 255, 0.1);
+  border-right: 4px solid #22d3ee;
+  padding-right: 12px;
+}
+
+.botao-navegacao svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.8;
+}
+
+header .icons i {
+  width: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+header .icons {
+  margin-right: 4%;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 20px;
+  margin-left: 20%;
+}
+
+.search-bar input {
+  width: 60%;
+  height: 25px;
+  padding: 5px;
+  margin-left: 80px;
+  border-radius: 20px;
+  border: none;
+  background-color: #212022;
+  color: #ffff;
+  padding-left: 20px;
+  width: 40%;
+  height: 2.1rem;
+  border: 0.5px solid #887f7f;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+/* =================== NOVO CSS PARA FOTO DE PERFIL E BOTÃO =================== */
+
+/* Como o body já está com display:flex e centralizado, não precisa repetir */
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ec1982;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto-perfil button {
+  padding: 20px 12px; /* Corrigi '12x' para '12px' */
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #c1ac35;
+  border: none;
+  border-radius: 4px;
+  color: black; /* Melhor contraste */
+}
+
+.botao-separado button {
+  margin-top: 15px;
+  text-align: center;
+  padding: 6px 12px;
+  background-color: #ec1982;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Manter a cor do texto para alguns elementos */
+
+h2,
+ul,
+p,
+a,
+ul li strong {
+  color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+
+.gallery {
+  display: flex;
+  align-content: flex-end;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.post {
+  background-color: #222;
+  border: 2px solid #ec1982;
+  border-radius: 8px;
+  width: 150px;  /* quadrado fixo */
+  height: 150px; /* quadrado fixo */
+  display: flex;
+  align-content: flex-end;
+}
+
+.post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-info {
+  display: none; /* oculto pra simplificar */
+}
+
+
+
+
+
+
