@@ -37,3 +37,9 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
 });
+
+function alternarDestaque(botao) {
+      const card = botao.closest('.disciplina-card');
+      card.classList.toggle('destaque');
+    }
+
